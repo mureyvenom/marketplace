@@ -1,0 +1,19 @@
+RewriteEngine On
+
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteRule ^([A-Za-z0-9\._\-]+)+[^\.php]$ market.php?merchant=$0 [NC]
+
+ErrorDocument 404 /404.php
+
+RewriteRule ^admin/ - [L,NC]
+
+RewriteCond %{REQUEST_FILENAME}+[^\.php] -f 
+RewriteRule  ^(.*)  %{REQUEST_FILENAME}.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([A-Za-z0-9\._\-]+)$ market.php?merchant=$0 [NC]
+
+#For removing the .php extension from file
+#RewriteRule ^([^\.]+)$ $1.php [NC,L]
+#For semantic URLs
+#RewriteRule ^u/([^\.]+) market.php?merchant=$1
