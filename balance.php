@@ -25,7 +25,7 @@ $account = $prow['account'];
 $account_bank = $prow['bank_code'];
 $merchmail = $prow['email'];
 $reference = "Payout for order with order id: ".$order_id;
-$seckey = "FLWSECK-30a1dfad86f24e77a40a3e050d928486-X";
+$seckey = "FLWSECK-XX-X";
 $beneficiary_name = $prow['firstname'];
 $currency = "NGN";
 
